@@ -417,16 +417,20 @@
     transition: .3s ease-in-out;
 
     color:var(--color-3);
+    font-weight: 700;
+    background-color: white;
 }
 
 .proyect_card:hover{
-    background-color: var(--color-5);
+    /*background-color: var(--color-5);*/
+    background-image: url("/images/fondoheader-footer.jpg");
+    background-size: cover;
     box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.75);
 }
 
-.proyect_card:hover .card_name{
+/*.proyect_card:hover .card_name{
     color: var(--color-1);
-}
+}*/
 
 .container_top_icons{
     display: flex;
@@ -511,6 +515,7 @@
 .gif_animado{
     width:200px;
     margin: 0 auto;
+    border-radius: var(--border-radius-1);
 }
 
 /*css de laterales*/
