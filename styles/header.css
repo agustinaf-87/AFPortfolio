@@ -78,7 +78,7 @@ body::-webkit-scrollbar-thumb {
 
     z-index: 1;
 
-    background-image: url("/images/fondoheader-footer.jpg");
+    background-image: url("../images/fondo-varios.jpg");
     background-size: cover;
 
     backdrop-filter: blur(10px);
