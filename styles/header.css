@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;1,500&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-1: rgb(102, 103, 171);
+    --color-2: rgb(249, 132, 63);
+    --color-3: rgb(97,97,97); /*mas oscuro*/
+    --color-4: rgb(162, 204, 193); 
+    --color-5:  rgba(209, 209, 230, 0.4 ); /*este es el transparente*/
+    --color-6: rgb(246, 238, 246);/*este ya esta para el fondo*/
+    --color-7: rgb(172, 167, 172);
+    --height-text: 170%;
+    /*agregar color texto*/
+
+    --border-radius-1: 5px;
+}
+
+body, html{
+    scroll-behavior: smooth;
+}
+
+html{
+    font-size: 16px;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+body{    
+    min-height: 10vh;
+    
+    counter-reset: item;
+    counter-reset: section ;
+
+    /*background-color: var(--color-6);*/
+    
+    overflow: hidden;
+
+}
+
+body::-webkit-scrollbar {
+    width: 7px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color-1);    /* color of the scroll thumb */
+    border-radius: var(--border-radius-1);       /* roundness of the scroll thumb */
+}
+
+
+/* solución de animaciones */
+.greeting_profile, .name_profile, .description_profile, .container_section_information, .conteiner_card_proyect, .container_subtitle_cards, .proyect_card,
+.item_menu, .container_logo, .container_lateral, .button_menu, .item_link_footer, .text_footer_author, .button_menu {
+    visibility: hidden;
+}
+
+.header{
+    width: 100%;
+    padding: 15px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1;
+
+    background-image: url("/images/fondoheader-footer.jpg");
+    background-size: cover;
+
+    backdrop-filter: blur(10px);
+    transition: .3s linear;
+}
+
+.container_navegation{
+    width: 50%;
+    min-width: 600px;
+    max-width: 700px;
+}
+
+.menu ul{
+    list-style: none;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.menu ul li{
+    counter-increment: item 1 ;
+    
+}
+
+.item_menu_link, .button_cv_resumen{
+    text-decoration: none;
+    color: var(--color-3); 
+    text-transform: capitalize;
+    font-weight: 500;
+    transition: .3s ease;
+
+    
+
+}
+
+.item_menu_link::before{
+    content:"0" counter(item) ".";
+    margin-right:5px ;
+    color:var(--color-1); 
+}
+
+.item_menu_link:hover{
+    color: var(--color-1); 
+}
+
+.button_cv_resumen{
+    padding: 10px;
+    border: 2px solid var(--color-1);
+    border-radius: var(--border-radius-1);
+    /*color: var(--color-1);*/
+    color: var(--color-3);
+    font-weight: 700;
+    transition: .5s ease-in-out;
+}
+.button_cv_resumen:hover{
+    background-color: var(--color-6);
+}
+ /*css del logo*/
+.container_logo{
+    width: 50px;
+    min-width: 50px;
+    z-index: 1;
+}
+.container_logo img{
+    width: 100%;
+    border-radius: var(--border-radius-1);
+}
+
+
+/* css del button menu responsive */
+.container_button_menu_responsive{
+    display: none;
+}
+.button_menu{
+    background: none;
+    border: none;
+    color: var(--text-color-1);
+
+    position: relative;
+    cursor: pointer;
+}
+
+
+.active_header{
+    transform: translateY(0%);
+    box-shadow: 0 10px 30px -15px rgba(0,0,0,0.75);
+}
+.desactive_header{
+    transform: translateY(-110%);
+}
+.ocultar_box_shadow{
+    box-shadow: none;
+}
+
+
+
+
+
+
